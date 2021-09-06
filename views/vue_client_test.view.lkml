@@ -31,6 +31,7 @@ view: vue_client_test {
   dimension: id {
     type: string
     sql: ${TABLE}.id ;;
+    hidden: yes
   }
 
   dimension: name {
