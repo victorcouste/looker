@@ -113,6 +113,7 @@ view: customers_carriers {
     type: number
     sql: ${TABLE}.luggweight ;;
   }
+
   measure: average_luggage_weight {
     type: average
     sql: ${luggage_weight} ;;
