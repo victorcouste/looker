@@ -2,7 +2,7 @@ view: vue_client_test {
   derived_table: {
     sql: select
           cust.*,
-          ca.carrname as carrier_name,
+          ca.carrname,
           b.luggweight
       from
           bigquery.default.bookings b,
@@ -39,7 +39,7 @@ view: vue_client_test {
     sql: ${TABLE}.name ;;
   }
 
-  dimension: form {
+  dimension: title {
     type: string
     sql: ${TABLE}.form ;;
   }
@@ -79,7 +79,7 @@ view: vue_client_test {
     sql: ${TABLE}.telephone ;;
   }
 
-  dimension: custtype {
+  dimension: customer_type {
     type: string
     sql: ${TABLE}.custtype ;;
   }
@@ -89,7 +89,7 @@ view: vue_client_test {
     sql: ${TABLE}.discount ;;
   }
 
-  dimension: langu {
+  dimension: language {
     type: string
     sql: ${TABLE}.langu ;;
   }
@@ -106,17 +106,16 @@ view: vue_client_test {
 
   dimension: carrier_name {
     type: string
-    sql: ${TABLE}.carrier_name ;;
+    sql: ${TABLE}.carrname ;;
   }
 
-  dimension: luggweight {
+  dimension: luggage_weight {
     type: number
     sql: ${TABLE}.luggweight ;;
-    hidden: yes
   }
-  measure: average_luggweight {
+  measure: average_luggage_weight {
     type: average
-    sql: ${luggweight} ;;
+    sql: ${luggage_weight} ;;
   }
 
 
@@ -125,7 +124,7 @@ view: vue_client_test {
       mandt,
       id,
       name,
-      form,
+      title,
       street,
       postbox,
       postcode,
@@ -133,13 +132,13 @@ view: vue_client_test {
       country,
       region,
       telephone,
-      custtype,
+      customer_type,
       discount,
-      langu,
+      language,
       email,
       webuser,
       carrier_name,
-      luggweight
+      luggage_weight
     ]
   }
 }
