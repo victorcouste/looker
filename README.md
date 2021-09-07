@@ -1,3 +1,3 @@
-# looker
+# Looker
 
-Repository to manage Looker model and project for demonstration with Starburst
+Repository to manage Looker models and projects for Starburst demonstrations
