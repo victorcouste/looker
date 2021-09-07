@@ -1,4 +1,4 @@
-view: vue_client_test {
+view: customers_carriers {
   derived_table: {
     sql: select
           cust.*,
