@@ -5,7 +5,7 @@ view: customers_carriers {
           ca.carrname,
           b.luggweight
       from
-          bigquery.default.bookings b,
+          gcs.datalake.bookings b,
           sqlserver.flights.carriers ca,
           saphana.sflight.scustom cust
       where

@@ -10,7 +10,6 @@ datagroup: victor_gcp_demo_default_datagroup {
 
 persist_with: victor_gcp_demo_default_datagroup
 
-explore: eu_suppliers {}
 explore: customers_carriers {}
 # explore: customer {}
 
